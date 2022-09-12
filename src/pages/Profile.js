@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import { GithubContext } from '../context/github/githubContext';
+import { Repos } from '../components/Repos';
 
 export const Profile = () => {
   const { name: urlName } = useParams();
@@ -93,7 +94,7 @@ export const Profile = () => {
           </div>
         </div>
       </div>
-      {repos.join()}
+      <Repos repos={repos} />
     </>
   );
 };
